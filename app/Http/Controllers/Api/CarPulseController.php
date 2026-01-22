@@ -44,7 +44,9 @@ class CarPulseController extends Controller
             's_back_left'       => 'required',
             's_back_right'      => 'required',    
             'latitude'          => 'required',
-            'longitude'         => 'required',  
+            'longitude'         => 'required',
+            'speed'             => 'required',
+            'satelite'          => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -63,6 +65,8 @@ class CarPulseController extends Controller
             's_back_right'      => $request->s_back_right,    
             'latitude'          => $request->latitude,
             'longitude'         => $request->longitude,  
+            'speed'             => $request->speed,
+            'satelite'          => $request->satelite,
         ]);
 
         return new CarPulseResource(true, 'Data Car Pulse Berhasil Ditambahkan.', $carpulse);

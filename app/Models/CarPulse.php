@@ -23,5 +23,7 @@ class CarPulse extends Model
         's_back_right',
         'latitude',
         'longitude',
+        'speed',
+        'satelite',
     ];
 }
